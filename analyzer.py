@@ -11,6 +11,9 @@ exclude_words = ['el', 'la', 'los', 'las', 'un',
 top_words = {}
 tweets_topic = open('./paro14m.txt',encoding='utf-8')
 for line in tweets_topic:
+    # Eliminamos espacios
+    # Convertimos a minusculas
+    # separamos caracteres.
     words = line.strip().lower().split()
 
     for word in words:
