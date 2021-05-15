@@ -27,10 +27,10 @@ def buscar_tweets():
             if tweet.full_text.startswith('RT'):
                 count += 1
                 continue
-            f = open('./paro14m.txt', 'a', encoding='utf-8')
-            f.write(tweet.full_text + '\n')
-            f.close
-            count += 1
+            with open('./paro14m.txt', 'a', encoding='utf-8') as f:
+                f.write(tweet.full_text + '\n')
+                f.close
+                count += 1
         id = tweet.id
         print(count)
 
